@@ -1,0 +1,157 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a tela inteira */
+    text-align: center;
+    background: linear-gradient(135deg, rgb(94, 104, 188), rgb(168, 168, 209));
+    font-family: 'Quicksand', serif;
+    color: #fff; /* Cor padrão do texto */
+  }
+  
+  /* Estilo do contêiner central */
+  .container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.5); /* Fundo meio preto */
+    backdrop-filter: blur(12px); /* Efeito de desfoque */
+    -webkit-backdrop-filter: blur(12px); /* Suporte para Safari */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.2s ease-out; /* Animação suave */
+    transition: all 0.3s ease-in-out; 
+  }
+  
+  /* Título principal */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    letter-spacing: 3px;
+  }
+  
+  /* Dados */
+  .data {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .data span {
+    font-weight: bold;
+    color: #e0e0e0;
+  }
+  
+  /* Animação de fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Estilo para o hover do quadrado */
+  .container:hover {
+    transform: scale(1.05); /* Amplia o quadrado */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* ------------------------------------
+     Responsividade com Media Queries
+  ------------------------------------ */
+  
+  /* Smartphones pequenos: 120px - 320px */
+  @media (max-width: 320px) {
+    body {
+      padding: 10px;
+    }
+  
+    .container {
+      padding: 20px;
+      max-width: 280px;
+      border-radius: 15px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
+  
+    .data {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Smartphones médios: 330px - 450px */
+  @media (min-width: 330px) and (max-width: 450px) {
+    .container {
+      padding: 25px;
+      max-width: 320px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .data {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Tablets pequenos e smartphones grandes: 451px - 768px */
+  @media (min-width: 451px) and (max-width: 768px) {
+    .container {
+      max-width: 400px;
+      padding: 30px;
+      border-radius: 18px;
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    .data {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Tablets grandes e telas médias: 769px - 1024px */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+      max-width: 450px;
+      padding: 35px;
+    }
+  
+    h1 {
+      font-size: 2.4rem;
+    }
+  
+    .data {
+      font-size: 1.3rem;
+    }
+  }
+  
+  /* Telas grandes: Acima de 1024px */
+  @media (min-width: 1025px) {
+    .container {
+      max-width: 600px;
+      padding: 40px;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    .data {
+      font-size: 1.5rem;
+    }
+  }
+  
